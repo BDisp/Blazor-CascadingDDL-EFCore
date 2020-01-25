@@ -10,8 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BlazorDDL.Server.Controllers
 {
-    public class CountriesController : Controller
-    { 
+    public class CountriesController : ControllerBase
+    {
         DataAccessClass objCountry = new DataAccessClass();
 
         [HttpGet]

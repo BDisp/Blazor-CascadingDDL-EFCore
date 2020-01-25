@@ -14,7 +14,8 @@ namespace BlazorDDL.Shared.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer(@"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=myTestDB;Data Source=ANKIT-HP\SQLEXPRESS;");
+                //optionsBuilder.UseSqlServer(@"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=myTestDB;Data Source=ANKIT-HP\SQLEXPRESS;");
+                optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=myTestDB;Trusted_Connection=True;MultipleActiveResultSets=true");
             }
         }
 
